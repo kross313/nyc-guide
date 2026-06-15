@@ -5,45 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NYC: June 18–21, 2026</title>
 <style>
-  :root{
-    --ink:#1f2328; --muted:#68707a; --cream:#faf6ee; --paper:#ffffff;
-    --navy:#10283d; --gold:#b68a3c; --sage:#e2ebdf; --line:#e4dbcf;
-    --shadow:0 10px 28px rgba(16,40,61,.10);
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
-  a{color:#0b5cad;font-weight:700;text-decoration:none}
-  a:hover{text-decoration:underline}
-  .hero{background:linear-gradient(rgba(16,40,61,.76),rgba(16,40,61,.86)),radial-gradient(circle at top left,#577b91,#10283d 65%);color:white;padding:68px 20px 58px;text-align:center}
-  .hero h1{margin:0;font-size:clamp(34px,7vw,68px);letter-spacing:.5px;line-height:1.05}
-  .hero .subtitle{margin:16px auto 0;font-size:clamp(17px,3vw,22px);opacity:.95}
-  .hero .tag{display:inline-block;margin-top:22px;padding:9px 16px;border:1px solid rgba(255,255,255,.42);border-radius:999px;color:#fff;font-size:14px}
-  .wrap{max-width:1080px;margin:0 auto;padding:26px 16px 70px}
-  section{margin:30px 0}
-  .section-title{display:flex;align-items:center;gap:10px;margin:0 0 15px;color:var(--navy);font-size:28px;line-height:1.15}
-  .card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
-  .welcome{border-left:8px solid var(--gold)}
-  .welcome p{font-size:17px}
-  .quick-grid,.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .quick,.day,.detail,.idea{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
-  .quick b{display:block;color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:.05em}
-  .quick span{display:block;margin-top:6px;font-size:16px}
-  .day h3{margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line);color:var(--navy);font-size:20px}
-  .date,.note{color:var(--muted);font-size:14px;font-weight:600}
-  .item{margin:10px 0;font-size:15px}
-  .free{background:var(--sage);border-radius:14px;padding:10px}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-  .detail h3,.idea h3{margin:0 0 10px;color:var(--navy);font-size:21px}
-  .button-row a,.links a{display:inline-block;margin:6px 8px 0 0;background:#f3eadb;color:#24475f;padding:8px 12px;border-radius:999px;font-size:14px}
-  .timeline{padding-left:20px;border-left:4px solid var(--gold)}
-  .event{margin:18px 0;padding:14px 16px;background:#fffaf2;border:1px solid #eadbc0;border-radius:16px}
-  .event strong{color:var(--navy)}
-  .idea{margin:14px 0}
-  .idea p{margin:8px 0 12px}
-  .recommend{background:linear-gradient(135deg,#fff,#f7efe3);text-align:center}
-  footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
-  @media(max-width:900px){.overview,.quick-grid,.grid{grid-template-columns:1fr}.hero{padding:56px 18px 46px}.card,.day,.detail,.idea{border-radius:18px}}
-  @media print{body{background:#fff}.card,.day,.detail,.idea{box-shadow:none}.hero{background:#10283d!important}a{text-decoration:underline;color:#000}}
+:root{--ink:#1f2328;--muted:#68707a;--cream:#faf6ee;--paper:#fff;--navy:#10283d;--gold:#b68a3c;--sage:#e2ebdf;--line:#e4dbcf;--shadow:0 10px 28px rgba(16,40,61,.10)}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+a{color:#0b5cad;font-weight:700;text-decoration:none}a:hover{text-decoration:underline}
+.hero{background:linear-gradient(rgba(16,40,61,.76),rgba(16,40,61,.86)),radial-gradient(circle at top left,#577b91,#10283d 65%);color:white;padding:68px 20px 58px;text-align:center}
+.hero h1{margin:0;font-size:clamp(34px,7vw,68px);letter-spacing:.5px;line-height:1.05}
+.hero .subtitle{margin:16px auto 0;font-size:clamp(17px,3vw,22px);opacity:.95}
+.hero .tag{display:inline-block;margin-top:22px;padding:9px 16px;border:1px solid rgba(255,255,255,.42);border-radius:999px;color:#fff;font-size:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 16px 70px}
+section{margin:30px 0}
+.section-title{display:flex;align-items:center;gap:10px;margin:0 0 15px;color:var(--navy);font-size:28px;line-height:1.15}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.welcome{border-left:8px solid var(--gold)}.welcome p{font-size:17px}
+.quick-grid,.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.quick,.day,.detail,.idea,.group-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+.quick b{display:block;color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+.quick span{display:block;margin-top:6px;font-size:16px}
+.day h3{margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line);color:var(--navy);font-size:20px}
+.date,.note{color:var(--muted);font-size:14px;font-weight:600}
+.item{margin:10px 0;font-size:15px}.free{background:var(--sage);border-radius:14px;padding:10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.detail h3,.idea h3{margin:0 0 10px;color:var(--navy);font-size:21px}
+.button-row a,.links a{display:inline-block;margin:6px 8px 0 0;background:#f3eadb;color:#24475f;padding:8px 12px;border-radius:999px;font-size:14px}
+.timeline{padding-left:20px;border-left:4px solid var(--gold)}
+.event{margin:18px 0;padding:14px 16px;background:#fffaf2;border:1px solid #eadbc0;border-radius:16px}.event strong{color:var(--navy)}
+.idea{margin:14px 0}.idea p{margin:8px 0 12px}
+.group-card{margin:22px 0;background:#fffdf8}.group-card h3{margin:0 0 8px;color:var(--navy);font-size:23px}
+.group-meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+.pill{display:inline-block;background:var(--sage);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700;color:#2c4b37}
+.nearby{margin-top:10px;color:var(--muted);font-size:14px}
+.recommend{background:linear-gradient(135deg,#fff,#f7efe3);text-align:center}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
+@media(max-width:900px){.overview,.quick-grid,.grid{grid-template-columns:1fr}.hero{padding:56px 18px 46px}.card,.day,.detail,.idea,.group-card{border-radius:18px}}
+@media print{body{background:#fff}.card,.day,.detail,.idea,.group-card{box-shadow:none}.hero{background:#10283d!important}a{text-decoration:underline;color:#000}}
 </style>
 </head>
 <body>
@@ -96,20 +91,49 @@
 </section>
 <section>
   <h2 class="section-title">🗽 Ideas for Exploring NYC</h2>
-  <p class="note">These are ideas, not fixed plans.</p>
-  <div class="idea"><h3>Governors Island</h3><p>Ferry from Lower Manhattan, car-free, bike rentals (the family quad bikes are a hit), giant slide at The Hills.</p><div class="links"><a href="https://www.govisland.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=Governors+Island+New+York" target="_blank">Map</a></div></div>
-  <div class="idea"><h3>The High Line + Little Island + Chelsea Market</h3><p>Enter the High Line at Gansevoort (south end) or 34th Street and walk it end to end. Little Island, the floating mushroom park on the Hudson, connects right at 14th Street and is free. Chelsea Market is great for lunch, vendors, weird shops, Los Tacos No. 1. You can do all three as one connected afternoon.</p><div class="links"><a href="https://www.thehighline.org/" target="_blank">High Line</a><a href="https://littleisland.org/" target="_blank">Little Island</a><a href="https://www.chelseamarket.com/" target="_blank">Chelsea Market</a><a href="https://www.lostacos1.com/" target="_blank">Los Tacos No. 1</a></div></div>
-  <div class="idea"><h3>Dumbo + Brooklyn Bridge Park</h3><p>Walk the Brooklyn Bridge from Manhattan into Dumbo (one way only), pizza at Juliana's, Jane's Carousel, Pier 6 playgrounds, Pier 2 roller rink.</p><div class="links"><a href="https://www.brooklynbridgepark.org/" target="_blank">Brooklyn Bridge Park</a><a href="https://www.julianaspizza.com/" target="_blank">Juliana's</a><a href="https://janescarousel.com/" target="_blank">Jane's Carousel</a><a href="https://www.google.com/maps/search/?api=1&query=DUMBO+Brooklyn+NY" target="_blank">DUMBO Map</a></div></div>
-  <div class="idea"><h3>The Tenement Museum</h3><p>Real preserved immigrant apartments on the Lower East Side. Storytelling-based tours, kids 8-14 are the sweet spot for it.</p><div class="links"><a href="https://www.tenement.org/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=Tenement+Museum+New+York" target="_blank">Map</a></div></div>
-  <div class="idea"><h3>The Met rooftop + Central Park</h3><p>Citi Bikes through the park, Egyptian wing + rooftop installation at the Met. Don't try to do the whole museum.</p><div class="links"><a href="https://www.metmuseum.org/" target="_blank">The Met</a><a href="https://www.centralparknyc.org/" target="_blank">Central Park</a><a href="https://citibikenyc.com/" target="_blank">Citi Bike</a></div></div>
-  <div class="idea"><h3>Coney Island</h3><p>Q train subway down. Cyclone, Nathan's, Luna Park, the boardwalk, the sideshow. Feels like a different city. (about an hour from city)</p><div class="links"><a href="https://lunaparknyc.com/" target="_blank">Luna Park</a><a href="https://nathansfamous.com/" target="_blank">Nathan's</a><a href="https://www.google.com/maps/search/?api=1&query=Coney+Island+Brooklyn+NY" target="_blank">Map</a></div></div>
-  <div class="idea"><h3>SUMMIT One Vanderbilt</h3><p>Mirror rooms, glass ledges, exterior glass elevator. Best high-up experience in the city for kids.</p><div class="links"><a href="https://summitov.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=SUMMIT+One+Vanderbilt+New+York" target="_blank">Map</a></div></div>
+  <p class="note">These are ideas, not fixed plans. We grouped nearby things together to make it easier to plan free time.</p>
+
+  <div class="group-card"><h3>⭐ Rockefeller Center & Fifth Avenue</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: 3–5 Hours</span><span class="pill">💡 Great For: Families • Shopping • Toy Stores • Iconic NYC Landmarks</span></div>
+    <div class="idea"><h3>LEGO Store – Fifth Avenue</h3><p>The iconic NYC LEGO Store featuring giant LEGO sculptures, exclusive New York-themed sets, a huge Pick-a-Brick wall, and hands-on building experiences. A must-stop for James and Stella.</p><p class="nearby"><strong>Nearby:</strong> Rockefeller Center • FAO Schwarz • Nintendo NY • St. Patrick's Cathedral • Top of the Rock</p><div class="links"><a href="https://www.lego.com/stores/store/new-york-5th-ave" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=LEGO+Store+Fifth+Avenue+New+York" target="_blank">Map</a></div></div>
+    <div class="idea"><h3>🏎️ CAMP Store</h3><p>An immersive toy store filled with interactive experiences, themed adventures, and hidden doors. It's much more than a toy store—kids can explore, play, and discover different worlds throughout the experience. Great if we have extra time with James and Stella.</p><p class="nearby"><strong>Nearby:</strong> Fifth Avenue • Rockefeller Center • LEGO Store • FAO Schwarz • Nintendo NY</p><div class="links"><a href="https://camp.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=CAMP+Store+New+York" target="_blank">Map</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🌿 Chelsea & The High Line</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: 2–4 Hours</span><span class="pill">💡 Great For: Walking • Lunch • Scenic Views • Staying Close to the Hotel</span></div>
+    <div class="idea"><h3>The High Line + Little Island + Chelsea Market</h3><p>Enter the High Line at Gansevoort (south end) or 34th Street and walk it end to end. Little Island, the floating mushroom park on the Hudson, connects right at 14th Street and is free. Chelsea Market is great for lunch, vendors, weird shops, Los Tacos No. 1. You can do all three as one connected afternoon.</p><div class="links"><a href="https://www.thehighline.org/" target="_blank">High Line</a><a href="https://littleisland.org/" target="_blank">Little Island</a><a href="https://www.chelseamarket.com/" target="_blank">Chelsea Market</a><a href="https://www.lostacos1.com/" target="_blank">Los Tacos No. 1</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🌆 Midtown</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: 2–3 Hours</span><span class="pill">💡 Great For: Comics • Observation Decks • Times Square • Classic NYC</span></div>
+    <div class="idea"><h3>Midtown Comics – Times Square</h3><p>One of the largest comic book stores in the United States with comics, graphic novels, collectibles, statues, Funko Pops, and exclusive merchandise. A must-visit for Sean.</p><p class="nearby"><strong>Nearby:</strong> Bryant Park • Times Square • Rockefeller Center • SUMMIT One Vanderbilt • Grand Central Terminal</p><div class="links"><a href="https://www.midtowncomics.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=Midtown+Comics+Times+Square+New+York" target="_blank">Map</a></div></div>
+    <div class="idea"><h3>SUMMIT One Vanderbilt</h3><p>Mirror rooms, glass ledges, exterior glass elevator. Best high-up experience in the city for kids.</p><div class="links"><a href="https://summitov.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=SUMMIT+One+Vanderbilt+New+York" target="_blank">Map</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🌉 Brooklyn Adventure</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: Half Day</span><span class="pill">💡 Great For: Pizza • Skyline Views • Kids • Parks</span></div>
+    <div class="idea"><h3>Dumbo + Brooklyn Bridge Park</h3><p>Walk the Brooklyn Bridge from Manhattan into Dumbo (one way only), pizza at Juliana's, Jane's Carousel, Pier 6 playgrounds, Pier 2 roller rink.</p><div class="links"><a href="https://www.brooklynbridgepark.org/" target="_blank">Brooklyn Bridge Park</a><a href="https://www.julianaspizza.com/" target="_blank">Juliana's</a><a href="https://janescarousel.com/" target="_blank">Jane's Carousel</a><a href="https://www.google.com/maps/search/?api=1&query=DUMBO+Brooklyn+NY" target="_blank">DUMBO Map</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🚲 Governors Island</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: Half Day</span><span class="pill">💡 Great For: Biking • Families • Skyline Views • Outdoor Fun</span></div>
+    <div class="idea"><h3>Governors Island</h3><p>Ferry from Lower Manhattan, car-free, bike rentals (the family quad bikes are a hit), giant slide at The Hills.</p><div class="links"><a href="https://www.govisland.com/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=Governors+Island+New+York" target="_blank">Map</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🏛️ Central Park</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: Half Day</span><span class="pill">💡 Great For: Biking • Museums • Relaxing • Classic NYC</span></div>
+    <div class="idea"><h3>The Met rooftop + Central Park</h3><p>Citi Bikes through the park, Egyptian wing + rooftop installation at the Met. Don't try to do the whole museum.</p><div class="links"><a href="https://www.metmuseum.org/" target="_blank">The Met</a><a href="https://www.centralparknyc.org/" target="_blank">Central Park</a><a href="https://citibikenyc.com/" target="_blank">Citi Bike</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🏘️ Lower East Side</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: 1–2 Hours</span><span class="pill">💡 Great For: History • Storytelling • Kids 8–14</span></div>
+    <div class="idea"><h3>The Tenement Museum</h3><p>Real preserved immigrant apartments on the Lower East Side. Storytelling-based tours, kids 8-14 are the sweet spot for it.</p><div class="links"><a href="https://www.tenement.org/" target="_blank">Official Website</a><a href="https://www.google.com/maps/search/?api=1&query=Tenement+Museum+New+York" target="_blank">Map</a></div></div>
+  </div>
+
+  <div class="group-card"><h3>🎡 Coney Island</h3><div class="group-meta"><span class="pill">⏱️ Suggested Time: Full Day</span><span class="pill">💡 Great For: Rides • Boardwalk • Beach • Classic NYC</span></div>
+    <div class="idea"><h3>Coney Island</h3><p>Q train subway down. Cyclone, Nathan's, Luna Park, the boardwalk, the sideshow. Feels like a different city. (about an hour from city)</p><div class="links"><a href="https://lunaparknyc.com/" target="_blank">Luna Park</a><a href="https://nathansfamous.com/" target="_blank">Nathan's</a><a href="https://www.google.com/maps/search/?api=1&query=Coney+Island+Brooklyn+NY" target="_blank">Map</a></div></div>
+  </div>
 </section>
+
 <section class="card recommend">
   <h2 class="section-title" style="justify-content:center;">❤️ Family Recommendations</h2>
   <p><strong>Have a favorite NYC restaurant, attraction, neighborhood, or hidden gem?</strong></p>
   <p>Send it our way and we'll add it to the guide!</p>
 </section>
+
 </main>
 <footer>NYC: June 18–21, 2026</footer>
 </body>
